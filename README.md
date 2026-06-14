@@ -119,4 +119,3 @@ uv run pytest -q     # offline; uses TestModel, never calls a live endpoint
   made them.
 - [Reflection report](docs/reflection-report.md): how the architecture works, the
   evaluation results, and what I'd improve next.
-- The design spec and implementation plans live under `docs/superpowers/`.
