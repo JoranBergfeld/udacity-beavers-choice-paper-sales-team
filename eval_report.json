@@ -1,0 +1,420 @@
+{
+  "rubric": {
+    "fulfilled_count": 9,
+    "declined_count": 1,
+    "cash_change_count": 10,
+    "not_all_fulfilled": true,
+    "helpers_used": [
+      "create_transaction",
+      "generate_financial_report",
+      "get_all_inventory",
+      "get_cash_balance",
+      "get_stock_level",
+      "get_supplier_delivery_date",
+      "search_quote_history"
+    ],
+    "all_helpers_used": true
+  },
+  "requests": [
+    {
+      "request_id": 1,
+      "request_date": "2025-04-01",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=65.0 total=61.75"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.05 got=0.05"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=587"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=100 available=595"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=100 available=788"
+        }
+      ]
+    },
+    {
+      "request_id": 2,
+      "request_date": "2025-04-03",
+      "fulfilled": false,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=140.0 total=119.0"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": false,
+          "detail": "invalid=['Balloons']"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        }
+      ]
+    },
+    {
+      "request_id": 3,
+      "request_date": "2025-04-04",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=770.0 total=654.5"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=15000 available=15000"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        }
+      ]
+    },
+    {
+      "request_id": 4,
+      "request_date": "2025-04-05",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=52.5 total=47.25"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.1 got=0.1"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=250 available=250"
+        }
+      ]
+    },
+    {
+      "request_id": 5,
+      "request_date": "2025-04-05",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=135.0 total=114.75"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=688"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=300 available=495"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=200"
+        }
+      ]
+    },
+    {
+      "request_id": 6,
+      "request_date": "2025-04-06",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=77.0 total=65.45"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=300 available=300"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=200"
+        }
+      ]
+    },
+    {
+      "request_id": 7,
+      "request_date": "2025-04-07",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=610.0 total=518.5"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=1000 available=1000"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=300 available=699"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=200"
+        }
+      ]
+    },
+    {
+      "request_id": 8,
+      "request_date": "2025-04-07",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=720.0 total=612.0"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.15 got=0.15"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=1000 available=1000"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=2000 available=2000"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=3000 available=3000"
+        }
+      ]
+    },
+    {
+      "request_id": 9,
+      "request_date": "2025-04-07",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=32.5 total=30.88"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.05 got=0.05"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=200"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=100 available=100"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=50 available=50"
+        }
+      ]
+    },
+    {
+      "request_id": 10,
+      "request_date": "2025-04-08",
+      "fulfilled": true,
+      "deterministic": [
+        {
+          "name": "price_math",
+          "passed": true,
+          "detail": "subtotal=55.0 total=49.5"
+        },
+        {
+          "name": "discount_rule",
+          "passed": true,
+          "detail": "expected=0.1 got=0.1"
+        },
+        {
+          "name": "valid_item_names",
+          "passed": true,
+          "detail": "invalid=[]"
+        },
+        {
+          "name": "no_leakage",
+          "passed": true,
+          "detail": "hits=[]"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=500 available=500"
+        },
+        {
+          "name": "no_oversell",
+          "passed": true,
+          "detail": "sold=200 available=200"
+        }
+      ]
+    }
+  ]
+}
